@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import '@animxyz/core';
+@include xyz-all;
+@include xyz-core;
+@include xyz-utilities;
+
+@font-face {
+  font-family: "gilroy";
+  src: url("/fonts/Gilroy-Regular.woff");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "gilroy";
+  src: url("/fonts/Gilroy-Bold.woff");
+  font-weight: bold;
+}
+
+body,
+html {
+  scroll-behavior: smooth !important;
+}
+body {
+  font-family: gilroy;
+  overflow-x: hidden;
+}

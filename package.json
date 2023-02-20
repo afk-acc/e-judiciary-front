@@ -1,0 +1,46 @@
+{
+  "name": "e-judicary",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@animxyz/core": "^0.6.6",
+    "@animxyz/vue3": "^0.6.7",
+    "@vueup/vue-quill": "^1.1.0",
+    "animate.css": "^4.1.1",
+    "aos-vue": "^0.0.5",
+    "axios": "^1.2.3",
+    "hooper": "^0.3.4",
+    "laravel-echo": "^1.15.0",
+    "pusher-js": "^8.0.1",
+    "router": "^1.3.7",
+    "sass": "^1.57.1",
+    "socket.io-client": "^4.6.0",
+    "swiper": "^8.4.6",
+    "vue": "^3.2.45",
+    "vue-awesome-swiper": "^5.0.1",
+    "vue-i18n": "^9.2.2",
+    "vue-owl-carousel": "^2.0.3",
+    "vue-router": "^4.1.6",
+    "vue-small-plugin": "^1.0.0",
+    "vue-star-rating": "^2.1.0",
+    "vue-typical": "^2.1.0",
+    "vue-yandex-maps": "^0.11.13",
+    "vue3-animate-onscroll": "^1.0.6",
+    "vue3-google-map": "^0.15.0",
+    "vue3-toastify": "^0.1.0",
+    "vuex": "^4.0.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.0.0",
+    "autoprefixer": "^10.4.13",
+    "postcss": "^8.4.21",
+    "tailwindcss": "^3.2.4",
+    "vite": "^4.0.0"
+  }
+}
