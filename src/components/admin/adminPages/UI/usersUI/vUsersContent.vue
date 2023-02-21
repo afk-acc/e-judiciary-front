@@ -74,20 +74,15 @@
               </svg>
             </i>
             </div>
-
-            <form
-                @submit.prevent="changeUser"
-                class="flex items-center gap-4 ">
-
-              <select id="roles" class=" border-[#DBDBDB] border-[1px] mx-10 w-[70%] outline-none   rounded-[12px] p-4"
-                      v-model="active_user.role_id" :value="active_user.role_id">
+            
+            <form @submit.prevent="changeUser"
+                class="flex items-center gap-4 maxsm:flex-col">
+              <select id="roles" class=" border-[#DBDBDB] border-[1px] mx-10 w-[70%] outline-none   rounded-[12px] p-4" v-model="active_user.role_id" :value="active_user.role_id">
                 <option value="" selected disabled class="text-l_black">{{ $t("Выбрать роль") }}</option>
                 <option :value="item.id" v-for="item in getRoleList">{{ item.role_name }}</option>
-
               </select>
               <div class=" flex justify-end mx-10 my-4 maxmd:mx-auto">
                 <button type="submit" class="text-l_white rounded-md outline-none bg-l_primary px-10 py-4 "
-                  
                 >{{ $t("Готово") }}
                 </button>
               </div>

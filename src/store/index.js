@@ -11,7 +11,7 @@ import role from './role.js'
 export default createStore({
     getters: {
         get_base_url(state) {
-            return 'http://e-judiciary/'
+            return 'http://192.168.100.6/'
         }
     },
 

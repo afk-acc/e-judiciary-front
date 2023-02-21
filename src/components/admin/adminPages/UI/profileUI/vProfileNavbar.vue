@@ -1,8 +1,6 @@
 <template>
   <div
-      class="flex maxxl:flex-wrap maxlg:justify-center items-center w-full justify-between bg-l_white h-[100px] maxxl:h-[30%] maxlg:w-full maxxl:py-4 maxmd:mt-10 rounded-lg"
-
-  >
+      class="flex maxxl:flex-wrap maxlg:justify-center items-center w-full justify-between bg-l_white h-[100px] maxxl:h-[30%] maxlg:w-full maxxl:py-4 maxmd:mt-[50px] rounded-lg ">
     <div class="flex items-center pl-4 mb-2 maxsm:flex-wrap maxsm:justify-center maxsm:flex-col">
       <div class="flex justify-between maxsm:flex-col maxsm:text-center">
         <h3 class="text-2xl ">{{ getCurrentUser.name }}</h3>
@@ -60,11 +58,11 @@
       </i>
       <p class="mx-auto mt-10 text-3xl maxmd:text-2xl maxmd:text-center ">{{$t('Редактирование пользователя')}}</p>
       <div class="px-10">
-        <p class="text-2xl font-medium">{{ $t('Образование') }}</p>
-        <v-input v-model:model-value="edit.education_place" :label="$t('Учебное учреждение')" type="text"/>
-        <label for="" class="text-xl text-l_black_text">{{$t('Дата обучения')}}</label>
-        <div class="flex justify-between gap-x-4">
-          <div class="w-full flex gap-x-2 items-center">
+        <p class="text-2xl font-medium maxsm:my-10 mt-4">{{ $t('Образование') }}</p>
+        <v-input class="mb-10" v-model:model-value="edit.education_place" :label="$t('Учебное учреждение')" type="text"/>
+        <label for="" class="text-xl text-l_black_text ">{{$t('Дата обучения')}}</label>
+        <div class="flex justify-between maxsm:flex-col gap-x-4">
+          <div class="w-full flex gap-x-2  items-center">
             <label for="">{{ $t('от') }}</label>
             <input
                 :placeholder="$t('от')"
@@ -72,7 +70,7 @@
                 v-model="edit.education_start"
                 class="bg-[#F7F8F9] w-full rounded-xl border border-[#DBDBDB] outline-none px-5 py-4 font-medium">
           </div>
-          <div class="w-full flex gap-x-2 items-center">
+          <div class="w-full flex gap-x-2 maxsm:py-4 items-center">
             <label for="">{{ $t("до") }}</label>
             <input
                 :placeholder="$t('до')"
@@ -82,10 +80,10 @@
           </div>
 
         </div>
-        <p class="text-2xl font-medium">{{ $t('Описание о себе') }}</p>
+        <p class="text-2xl font-medium mt-10">{{ $t('Описание о себе') }}</p>
         <v-input v-model:model-value="edit.description"
                  label="Описание" type="textarea"/>
-        <p class="text-2xl font-medium mt-4">{{ $t('Фотография профиля') }}</p>
+        <p class="text-2xl font-medium mt-4 maxsm:text-center maxsm:mb-5">{{ $t('Фотография профиля') }}</p>
         <div class="flex justify-center my-2" v-if="edit.image">
 
           <img class="rounded-full w-[200px] h-[200px] object-cover " :src="edit.image" alt="" >

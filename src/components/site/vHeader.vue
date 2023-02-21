@@ -23,28 +23,27 @@
         </div>
         <nav class="flex items-center maxxl:pl-20">
           <ul
-              class="flex justify-between maxlg:h-screen maxlg:pb-[110px] duration-300 transition-all items-center maxlg:bg-l_primary maxlg:w-full maxlg:flex-col left-0 "
+              class="flex justify-evenly maxlg:h-screen maxlg:pb-[110px] duration-300 transition-all items-center maxlg:bg-l_primary maxlg:w-full maxlg:flex-col left-0 text-3xl"
               :class="{
               'top-[90px] max-h-screen maxlg:fixed': open,
               '-top-full maxlg:-translate-y-full maxlg:absolute': !open,
-            }"
-          >
+            }">
             <li
-                class="text-l_white text-sm font-gilroy lg:mr-10 cursor-pointer"
+                class="text-l_white  font-gilroy lg:mr-10 cursor-pointer"
             >
               <router-link :to="{ name: 'about-company' }">
                 {{ $t('О компании') }}
               </router-link>
             </li>
             <li
-                class="text-l_white text-sm font-gilroy lg:mr-10 cursor-pointer"
+                class="text-l_white  font-gilroy lg:mr-10 cursor-pointer"
             >
               <router-link :to="{name: 'teams'}">
                 {{ $t('Команда') }}
               </router-link>
             </li>
             <li
-                class="text-l_white text-sm font-gilroy lg:mr-10 cursor-pointer"
+                class="text-l_white  font-gilroy lg:mr-10 cursor-pointer"
             >
               <router-link :to="{ name: 'services' }">
 
@@ -54,19 +53,19 @@
             </li>
 
             <li
-                class="text-l_white text-sm font-gilroy lg:mr-10 cursor-pointer"
+                class="text-l_white  font-gilroy lg:mr-10 cursor-pointer"
             >
               {{ $t('Новости') }}
 
             </li>
             <li
-                class="text-l_white text-sm font-gilroy lg:mr-10 cursor-pointer"
+                class="text-l_white  font-gilroy lg:mr-10 cursor-pointer"
             >
               <router-link :to="{name: 'faq'}">
                 {{ $t('FAQ') }}
               </router-link>
             </li>
-            <li class="text-l_white text-sm font-gilroy cursor-pointer">
+            <li class="text-l_white  font-gilroy cursor-pointer">
               <a href="contacts">
                 {{ $t('Контакты') }}
                 </a>
@@ -77,21 +76,19 @@
                 </router-link>
             </li>
             <select
-                class="lg:hidden w-[50px] outline-none mr-4 text-l_black text-sm font-gilroy px-9 cursor-pointer rounded-md font-bold"
+                class=" lg:hidden outline-none appearance-none w-12 h-12 text-center rounded-[34px] text-sm"
                 v-model="lang"
             >
               <option value="uz_l">Uz</option>
-              <option value="uz_c">Уз (кирилица)</option>
-              <option value="ru">
-                Ру
-              </option>
+              <option value="uz_c">Уз(кирилица)</option>
+              <option value="ru">Ру</option>
             </select>
            
           </ul>
         </nav>
         <div class="flex maxlg:hidden">
           <select
-              class=" outline-none text-center mr-4 text-l_black  font-gilroy px-2 cursor-pointer rounded-md font-bold"
+              class="outline-none text-center mr-4 appearance-none text-l_black font-gilroy px-2 cursor-pointer rounded-md font-bold"
               v-model="lang"
           >
             <option value="uz_l">Uz</option>
@@ -162,4 +159,13 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+  li{
+    font-size: 14px;
+  }
+  @media (max-width: '1086px') {
+    li{
+      font-size: 24px;
+    }
+  }
+</style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-l_white p-4 rounded-2xl">
+  <div class="bg-l_white p-4 rounded-2xl overflow-x-scroll maxlg:w-full maxsm:mt-[50px]">
     <div class="">
       <table class=" table-auto  w-[100%] maxmd:w-[130%] ">
         <thead class="">
@@ -8,7 +8,7 @@
           <th>{{ $t("Имя") }}</th>
           <th>{{ $t("E-mail") }}</th>
           <th>{{ $t("Образование") }}</th>
-          <th>{{ $t("Действия") }}</th>
+          <th class="">{{ $t("Действия") }}</th>
         </tr>
         </thead>
         <tbody class="w-full">

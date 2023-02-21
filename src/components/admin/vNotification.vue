@@ -1,9 +1,9 @@
 <template>
-  <div class="flex gap-x-3 items-center px-4 border-b border-filter_gray py-2">
+  <div class="flex gap-x-3 maxesm:w-full items-center px-4 border-b border-filter_gray py-2">
     <div class="w-10 h-10">
       <img class="w-full rounded-full object-cover" :src="getImage(item.sender_info , item.sender_info.image)" alt="">
     </div>
-    <div class="flex flex-col">
+    <div class="flex flex-col maxesm:flex-wrap">
       <div class="flex justify-between"><span>{{ item.sender_info.name }}</span><span>{{
           getDate(item.created_at)
         }} </span></div>

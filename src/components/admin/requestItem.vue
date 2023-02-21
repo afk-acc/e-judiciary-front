@@ -7,7 +7,7 @@
     <td class="text-center py-2 px-2">
       {{ item.name }}
     </td>
-    <td class="user-item_email text-center py-2 px-2 text-l_primary">
+    <td class="user-item_email text-center py-2 maxmd:px-16 text-l_primary">
       {{ item.email || '-' }}
     </td>
     <td class="user-item_city text-center p-2 ">

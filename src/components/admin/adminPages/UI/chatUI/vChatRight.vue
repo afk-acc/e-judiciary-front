@@ -1,6 +1,6 @@
 <template>
   <div class="w-9/12 flex h-full maxlg:w-full maxlg:mx-auto">
-    <div class="w-9/12 maxlg:w-full border-r-[1px] maxlg:border-none border-[#DBDDE2] h-full pb-16">
+    <div class="w-9/12 maxlg:w-full border-r-[1px] maxlg:border-none border-[#DBDDE2] h-full pb-16 maxsm:h-[90%]">
       <div>
         <div v-if="chat"
              class="chat-left_title  flex justify-between items-center border-b-[1px] py-[10px] px-12 border-[#DBDDE2]">
@@ -25,7 +25,7 @@
           </div>
         </div>
       </div>
-      <div class=" h-full  flex flex-col justify-between">
+      <div class=" h-full  flex flex-col justify-between ">
         <div class="h-full  flex flex-col justify-between" v-if="chat">
           <div class="px-4 overflow-y-scroll py-4" ref="messages_block" id="messages_block" @scroll="onScroll">
             <v-message @updateDate="updateDate" :dates="dates" v-for="item in messages" :ket="item.id" :message="item"
@@ -68,7 +68,7 @@
             <input
                 v-model="message.data"
                 type="text"
-                class="resize-none w-full pl-12 pr-24 h-full bg-[#E9EFFF] absolute px-4 py-2 outline-none py-2"/>
+                class="resize-none w-full pl-12 pr-24 h-full  bg-[#E9EFFF] absolute px-4 outline-none py-2"/>
             <button type="submit"
                     class="w-[75px] relative z-10 h-[60px] bg-l_primary rounded-xl flex justify-center items-center">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -86,8 +86,8 @@
     </div>
     <div
         v-if="chat"
-        class="w-3/12 maxmd:w-4/12 maxsm:w-9/12 maxlg:absolute  maxlg:bg-l_white maxlg:border-l-[1px] maxlg:border-[#DBDDE2] transition-all duration-300"
-        :class="{'maxlg:-right-[400px]':!modalRight, 'maxlg:right-0  h-full' : modalRight}"
+        class="w-3/12 maxmd:w-4/12 maxsm:w-9/12 maxlg:absolute  maxlg:bg-l_white maxlg:border-l-[1px] maxlg:border-[#DBDDE2] transition-all duration-300 z-10"
+        :class="{'maxlg:-right-[500px]':!modalRight, 'maxlg:right-0  h-full' : modalRight}"
     >
       <div class="p-[20px] border-b-[1px] border-[#DBDDE2] maxlg:text-center">
         <p class="text-xl" v-if="reciver.role_name === 'lawyer'"> {{ $t("О юристе") }}</p>

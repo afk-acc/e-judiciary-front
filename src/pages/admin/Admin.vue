@@ -3,7 +3,7 @@
   >
     <div class="flex ">
       <admin-header
-          class=" absolute p-4 flex items-center right-0 ">
+          class=" absolute p-4 flex items-center right-0">
       </admin-header>
       <div class="flex relative maxlg:absolute transition-all ease-in duration-300">
         <XyzTransition xyz="fade left-5">
@@ -20,10 +20,9 @@
           </svg>
         </div>
       </div>
-      <div class="w-full h-full px-5 my-14 z-10 transition-all ease-in duration-300 "
-           :class="{' p-10 my-16': this.$route.name !== 'chat'}">
-
-        <router-view >
+      <div class="w-full h-full px-5 my-[120px]  z-10 transition-all ease-in duration-300 "
+           :class="{' my-[100px]': this.$route.name !== 'chat'}">
+        <router-view class="">
 
         </router-view>
       </div>

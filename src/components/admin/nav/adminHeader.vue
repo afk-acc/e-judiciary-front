@@ -8,17 +8,14 @@
           class="outline-none appearance-none w-12 h-12 text-l_white bg-filter_gray text-center rounded-[34px] text-sm">
         <option value="uz_l">Uz</option>
         <option value="uz_c">Уз(к)</option>
-        <option value="ru">
-          Ру
-        </option>
+        <option value="ru">Ру</option>
       </select>
     </div>
-    <div class="header-icons flex maxsm:flex-col items-center ">
-      <div class="notification flex">
+    <div class="header-icons flex maxsm:flex-col  items-center ">
+      <div class="notification flex maxsm:py-2">
         <div class="relative">
           <div class="relative">
             <div @click="show_notification=!show_notification" class="cursor-pointer">
-
               <svg class="mx-4 cursor-pointer" width="18" height="20"
                    viewBox="0 0 18 20" fill="none"
                    xmlns="http://www.w3.org/2000/svg">
@@ -44,7 +41,7 @@
 
           <div
               v-if="show_notification && get_notifications.length > 0"
-              class="absolute top-10 z-40 -left-[200px] max-h-[400px] overflow-scroll max-w-[400px] w-screen rounded-2xl bg-l_white py-5 flex flex-col gap-y-4">
+              class="absolute top-10 z-40 -left-[200px] maxsm:-left-[150px] maxesm:px-6 maxesm:mx-4 maxesm:flex-wrap max-h-[400px] overflow-scroll max-w-[400px] w-screen rounded-2xl bg-l_white py-5 flex flex-col gap-y-4">
             <v-notification :item="item" v-for="(item,index) in get_notifications" :key="index"/>
           </div>
         </div>

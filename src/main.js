@@ -5,10 +5,8 @@ import "./style/app.css";
 import VueAwesomeSwiper from "vue-awesome-swiper";
 import "swiper/swiper-bundle.css";
 import store from './store'
-import axios from "./axios/index.js";
 import {QuillEditor} from '@vueup/vue-quill'
 import '@vueup/vue-quill/dist/vue-quill.snow.css';
-import Echo from 'laravel-echo'
 import pusher from './pusher'
 import {languages, defaultLocale} from "./lang/index.js";
 import {createI18n} from "vue-i18n";
@@ -17,13 +15,6 @@ import VueAnimXyz from '@animxyz/vue3'
 import '@animxyz/core'
 
 import VueAnimateOnScroll from 'vue3-animate-onscroll';
-
-
-import SmallPlugin from "vue-small-plugin"
-
-// import pusher from 'pusher-js'
-// window.io = import('socket.io-client')
-// window.Pusher = import('pusher-js')
 
 
 const app = createApp(App);
@@ -46,18 +37,18 @@ app.use(VueAnimateOnScroll);
 app.use(VueAwesomeSwiper);
 app.use(store);
 app.use(pusher, {
-    wsHost: 'e-judiciary',
+    wsHost: '192.168.100.6',
     wsPort:6001,
     apiKey: 'e-judiciary-app-key', forceTLS: false,
     cluster: "mt1",
-    authEndpoint: "http://e-judiciary/api/v1/pusher/auth",
+    authEndpoint: "http://192.168.100.6/api/v1/pusher/auth",
     auth: {
         headers: {
             Authorization: "Bearer " + localStorage.getItem("token"),
         },
     },
     userAuthentication: {
-        endpoint: "http://e-judiciary/api/v1/pusher/auth",
+        endpoint: "http://192.168.100.6/api/v1/pusher/auth",
         headers: {
             Accept: "application/json",
             Authorization: "Bearer " + localStorage.getItem("token"),

@@ -3,8 +3,7 @@
   <div class="">
   
     <div
-        class="flex items-center maxmd:flex-wrap justify-between px-6 border-b border-filter_gray border-opacity-50 pb-5">
-
+        class="flex items-center maxmd:flex-wrap justify-between px-6 border-b border-filter_gray border-opacity-50 pb-5 maxsm:justify-end">
       <div class="flex  gap-x-5 items-center maxsm:hidden">
         <div>
           <img class="w-[50px] h-[50px] rounded-full object-cover" :src="getImage(report?.reciver_info?.image)" alt=""/>
@@ -55,7 +54,7 @@
         </div>
       </div>
       <div>
-        <p class="text-filter_gray">{{getDate(report?.created_at)}}</p>
+        <p class="text-filter_gray maxsm:ml-10">{{getDate(report?.created_at)}}</p>
       </div>
     </div>
     <div class="px-10 my-10">

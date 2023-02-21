@@ -1,5 +1,5 @@
 <template>
-  <div class=" hidden maxlg:block absolute z-10 maxlg:left-10 maxlg:top-5 cursor-pointer maxsm:top-12"
+  <div class=" hidden maxlg:block absolute z-50 maxlg:left-10 maxlg:top-5 cursor-pointer maxsm:top-12"
        @click="modalLeft = !modalLeft"
   >
     <i>

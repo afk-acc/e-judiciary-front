@@ -1,10 +1,10 @@
 <template>
-  <div class="flex justify-between text-l_primary text-xl ">
-    <div class="cursor-pointer">
+  <div class="flex justify-between text-l_primary text-xl maxmd:w-full ">
+    <div class="cursor-pointer maxmd:w-4/12 maxmd:mr-4">
       <p>{{ item.role_name }}</p>
     </div>
-    <div class="flex gap-x-12">
-      <button class="flex gap-x-2 items-center " @click="$emit('changeCurrentRole', item)" v-if="can(getCurrentUser, 'role.permission.edit')">
+    <div class="flex gap-x-12  maxsm:w-6/12">
+      <button class="flex gap-x-2 items-center  maxsm:text-base maxsm:w-[500px]" @click="$emit('changeCurrentRole', item)" v-if="can(getCurrentUser, 'role.permission.edit')">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" clip-rule="evenodd"
                 d="M7.79006 15.2699L8.52006 11.8599C8.62634 11.3861 8.86572 10.9524 9.21006 10.6099L15.8801 3.99993C16.5564 3.3109 17.4748 2.91271 18.4401 2.88993C19.1681 2.8795 19.8701 3.1603 20.3901 3.66993C21.5262 5.01239 21.3796 7.01715 20.0601 8.17993L13.3901 14.8499C13.0476 15.1943 12.6139 15.4337 12.1401 15.5399L8.73006 16.2699H8.54006C8.29077 16.2795 8.05267 16.1661 7.90298 15.9665C7.7533 15.7669 7.71109 15.5066 7.79006 15.2699ZM10.2701 11.6799C10.1299 11.8157 10.0326 11.9895 9.99006 12.1799L9.50006 14.5099L11.8301 14.0099C12.0205 13.9674 12.1943 13.87 12.3301 13.7299L19.0001 7.05993C19.7307 6.47495 19.8757 5.42041 19.3301 4.65993C19.0911 4.43164 18.7704 4.3091 18.4401 4.31993C17.8706 4.34279 17.3325 4.58673 16.9401 4.99993L10.2701 11.6799Z"
@@ -15,7 +15,7 @@
         </svg>
         {{ $t('Изменить роль') }}
       </button>
-      <button v-if="can(getCurrentUser, 'role.delete')" @click="$emit('del', item)" class="flex gap-x-2 items-center text-white_red "><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <button v-if="can(getCurrentUser, 'role.delete')" @click="$emit('del', item)" class="flex gap-x-2 items-center text-white_red maxsm:text-base"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M5.5 8L5.85207 17.1537C5.93467 19.3015 7.69902 21 9.84835 21C11.1516 21 12.6568 21 14.1509 21C16.3002 21 18.0653 19.3015 18.1479 17.1537L18.5 8" stroke="#EB5757" stroke-width="1.4" stroke-linecap="round"/>
         <path d="M8.99973 4.91485L9.99973 4.91485C9.99973 4.91485 10.3449 3.21454 11.9997 3.21454C13.6546 3.21453 13.9997 4.91486 13.9997 4.91486L14.9997 4.91486" stroke="#EB5757" stroke-width="1.4" stroke-linecap="round"/>
         <path d="M14 14V16" stroke="#EB5757" stroke-width="1.4" stroke-linecap="round"/>

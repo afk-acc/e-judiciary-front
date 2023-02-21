@@ -1,15 +1,15 @@
 <template>
   <div class="mt-4 flex flex-col">
-    <label for="" class="text-xl text-l_black_text">{{ label }}</label>
+    <label for="" class="text-xl">{{ label }}</label>
     <textarea
         v-if="type==='textarea'"
         :placeholder="label"
         :value="modelValue" @input="$emit('update:modelValue', $event.target.value)" name="" id=""
-        class="resize-none bg-[#F7F8F9] border border-[#DBDBDB] rounded-xl px-5 py-4 outline-none text-l_black_text text-2xl" cols="30" rows="10" ></textarea>
+        class="resize-none bg-[#F7F8F9] border border-[#DBDBDB] rounded-xl px-5 py-4 outline-none text-l_black_text text-2xl maxsm:my-6" cols="30" rows="10" ></textarea>
     <input
         v-else
         :type="type" :value="modelValue" @input="$emit('update:modelValue', $event.target.value)"
-        type="text"  class="bg-[#F7F8F9] rounded-xl border border-[#DBDBDB] outline-none px-5 py-4 font-medium">
+        type="text"  class="bg-[#F7F8F9] rounded-xl border border-[#DBDBDB] outline-none px-5 py-4 font-medium maxsm:my-6">
   </div>
 </template>
 

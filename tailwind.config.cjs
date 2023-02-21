@@ -54,6 +54,7 @@ module.exports = {
       maxmd: { max: "767px" },
 
       maxsm: { max: "639px" },
+      "maxesm": {max: "365px"},
       "2xl": { min: "1535px" },
       
       "maxf":{max: '976px'},
